@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Layout for the editor -->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_margin"
+        tools:context=".EditorActivity">
+
+        <!-- Name category -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Label: Name -->
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_name" />
+
+            <!-- Input fields: Name field -->
+            <EditText
+                android:id="@+id/edit_inventory_name"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_inventory_name"
+                android:inputType="textCapWords" />
+        </LinearLayout>
+
+        <!-- Price category -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Label: Price -->
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_price" />
+
+            <!-- Price field -->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/label_dollar_sign"
+                    android:text="@string/dollar_sign"
+                    style="@style/EditorUnitsStyle" />
+
+            <EditText
+                android:id="@+id/edit_inventory_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="14dp"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_inventory_price"
+                android:inputType="number" />
+
+
+        </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- Quantity category -->
+        <LinearLayout
+            android:id="@+id/container_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Label: Quantity -->
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_quantity" />
+
+            <!-- Input field: Quantity field -->
+            <EditText
+                android:id="@+id/edit_inventory_quantity"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_inventory_quantity"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <!-- Supplier category -->
+        <LinearLayout
+            android:id="@+id/container_supplier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Label: Supplier -->
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_supplier" />
+
+            <!-- Input fields: Supplier field -->
+            <EditText
+                android:id="@+id/edit_inventory_supplier"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_inventory_supplier"
+                android:inputType="textCapWords" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/container_select_image_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Label: Select Photo -->
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/select_photo" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <!-- Input fields: Photo selection field drop-down spinner -->
+                <Spinner
+                    android:id="@+id/spinner_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:paddingRight="16dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/blob_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_dummy_image" />
+
+        <LinearLayout
+            android:id="@+id/sale_shipment_delete_buttons_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/sales_button"
+                style="@style/ButtonsStyle"
+                android:onClick="salesButtonClicked"
+                android:text="@string/sales_button" />
+
+            <Button
+                android:id="@+id/shipment_button"
+                style="@style/ButtonsStyle"
+                android:onClick="shipmentButtonClicked"
+                android:text="@string/shipment_button" />
+
+            <Button
+                android:id="@+id/delete_button"
+                style="@style/ButtonsStyle"
+                android:onClick="deleteButtonClicked"
+                android:text="@string/delete_button" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/order_more_button"
+            android:layout_width="match_parent"
+            style="@style/ButtonsStyle"
+            android:onClick="orderMoreButtonClicked"
+            android:text="@string/order_more"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,141 @@
+<resources>
+    <string name="app_name">Inventory</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_editor">EditorActivity</string>
+
+    <!-- Title for the activity to add a new inventory [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_new_inventory">Add Inventory</string>
+
+    <!-- Title for the activity to edit inventory [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_edit_inventory">Edit Inventory</string>
+
+    <!-- Toast message in editor when new inventory has been successfully inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_inventory_successful">Inventory saved</string>
+
+    <!-- Toast message in editor when new inventory has failed to be inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_inventory_failed">Error with saving Inventory</string>
+
+    <!-- Toast message in editor when new inventory has been successfully inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_update_inventory_successful">Inventory updated</string>
+
+    <!-- Toast message in editor when new inventory has failed to be inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_update_inventory_failed">Error with updating inventory</string>
+
+    <!-- Toast message in editor when current inventory was successfully deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_inventory_successful">Inventory deleted</string>
+
+    <!-- Toast message in editor when current inventory has failed to be deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_inventory_failed">Error with deleting inventory</string>
+
+    <!-- Toast message in editor when no camera available on device [CHAR LIMIT=NONE] -->
+    <string name="editor_no_camera_on_device">Camera not availale on this device</string>
+
+    <!-- Label for overview category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="category_name">Name:</string>
+
+    <!-- Label for overview category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="category_price">Price:</string>
+
+    <!-- Label for overview category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="dollar_sign">$</string>
+
+    <!-- Label for overview category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="category_quantity">Quantity:</string>
+
+    <!-- Label for overview category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="category_supplier">Supplier:</string>
+
+    <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_inventory_name">Mandatory field</string>
+
+    <!-- Text hint for price field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_inventory_price">0</string>
+
+    <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_inventory_quantity">0</string>
+
+    <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_inventory_supplier">Unknown Supplier</string>
+
+    <!-- Label for the inventory's supplier if the supplier is unknown [CHAR LIMIT=20] -->
+    <string name="unknown_supplier">Unknown Supplier</string>
+
+    <!-- Title text for the empty view, which describes the empty dog house image [CHAR LIMIT=50] -->
+    <string name="empty_view_title_text">Inventory is empty</string>
+
+    <!-- Subtitle text for the empty view that prompts the user to add a inventory [CHAR LIMIT=50] -->
+    <string name="empty_view_subtitle_text">Get started by adding an inventory either by\nclicking
+                on menu or clicking on hand-pen icon</string>
+
+    <!-- Label for overflow menu option that inserts fake inventory data into the app [CHAR LIMIT=20] -->
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+
+    <!-- Label for overflow menu option that deletes all inventory data in the app [CHAR LIMIT=20] -->
+    <string name="action_delete_all_entries">Delete All Inventory</string>
+
+    <!-- Dialog message when user is leaving editor but hasn't saved changes [CHAR LIMIT=NONE] -->
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+
+    <!-- Dialog button text for the option to discard a user's changes [CHAR LIMIT=20] -->
+    <string name="discard">Discard</string>
+
+    <!-- Dialog button text for the option to keep editing the current inventory [CHAR LIMIT=20] -->
+    <string name="keep_editing">Keep Editing</string>
+
+    <!-- Dialog message to ask the user to confirm deleting the current inventory [CHAR LIMIT=NONE] -->
+    <string name="delete_dialog_msg">Delete this inventory?</string>
+
+    <!-- Dialog message to ask the user to confirm quantity sold of the current inventory [CHAR LIMIT=NONE] -->
+    <string name="sales_dialog_msg">Enter quantity sold:</string>
+
+    <!-- Dialog message to ask the user to confirm quantity shipment the current inventory [CHAR LIMIT=NONE] -->
+    <string name="shipment_dialog_msg">Enter quantity shipment in:</string>
+
+    <!-- Dialog message to ask the user to confirm ordering the current inventory [CHAR LIMIT=NONE] -->
+    <string name="order_more_dialog_msg">Enter quantity to order:</string>
+
+    <!-- Dialog button text for the option to confirm deleting the current inventory [CHAR LIMIT=20] -->
+    <string name="delete">Delete</string>
+
+    <!-- Dialog button text for the option to confirm deleting the current inventory [CHAR LIMIT=20] -->
+    <string name="ok">Ok</string>
+
+    <!-- Dialog button text for the option to cancel deletion of the current inventory [CHAR LIMIT=20] -->
+    <string name="cancel">Cancel</string>
+
+    <!-- Label for editor menu option to save inventory and leave editor [CHAR LIMIT=20] -->
+    <string name="action_save">Save</string>
+
+    <!-- Label for editor overflow menu option that deletes the current inventory [CHAR LIMIT=20] -->
+    <string name="action_delete">Delete</string>
+
+    <!-- Label for editor text for photo selection option -->
+    <string name="select_photo">Select Photo:</string>
+
+    <!-- Spinner photo selection option -->
+    <string name="photo_keep_current_photo">Keep current photo</string>
+
+    <!-- Spinner photo selection option -->
+    <string name="photo_photo_from_gallery">Photo from gallery</string>
+
+    <!-- Spinner photo selection option -->
+    <string name="photo_take_photo_with_camera">Take photo with camera</string>
+
+    <!-- Button: Sale -->
+    <string name="sales_button">Sale</string>
+
+    <!-- Button: Shipment -->
+    <string name="shipment_button">Shipment</string>
+
+    <!-- Button: Delete -->
+    <string name="delete_button">Delete</string>
+
+    <!-- Button: Order more -->
+    <string name="order_more">Order More</string>
+
+    <!-- Button: ListView "1 sold" -->
+    <string name="button_1_sold">1 Sold</string>
+
+</resources>

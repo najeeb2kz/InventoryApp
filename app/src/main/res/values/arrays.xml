@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- These are the options displayed in the gender drop-down Spinner -->
+    <string-array name="array_photo_options">
+        <item>@string/photo_keep_current_photo</item>
+        <item>@string/photo_photo_from_gallery</item>
+        <item>@string/photo_take_photo_with_camera</item>
+    </string-array>
+</resources>
