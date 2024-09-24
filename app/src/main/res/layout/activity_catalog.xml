@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CatalogActivity">
+    tools:context="com.chaudhry.najeeb.inventory.CatalogActivity">
 
     <ListView
         android:id="@+id/list"
@@ -25,6 +25,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_centerHorizontal="true"
+            android:contentDescription="@string/image"
             android:src="@drawable/ic_empty_inventory"/>
 
         <TextView
@@ -51,13 +52,14 @@
             android:textColor="#A2AAB0"/>
     </RelativeLayout>
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/floatingactionbutton"
         android:src="@drawable/ic_fab"/>
 </RelativeLayout>
 

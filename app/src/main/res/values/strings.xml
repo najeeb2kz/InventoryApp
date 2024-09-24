@@ -137,5 +137,7 @@
 
     <!-- Button: ListView "1 sold" -->
     <string name="button_1_sold">1 Sold</string>
+    <string name="image">image</string>
+    <string name="floatingactionbutton">FloatingActionButton</string>
 
 </resources>

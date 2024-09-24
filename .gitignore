@@ -1,7 +1,39 @@
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
+# Gradle files
+.gradle/
+build/
+
+# Local configuration files
+local.properties
+.idea/workspace.xml
+.idea/libraries
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/compiler.xml
+.idea/misc.xml
+.idea/modules.xml
+
+# Ignore Android Studio project files
+*.iml
+.idea/
+
+# Ignore generated files
+*.apk
+*.ap_
+*.dex
+*.class
+*.jar
+*.war
+*.ear
+*.db
+*.keystore
+*.jks
+
+# Ignore log files
+*.log
+
+# Ignore OS-specific files
 .DS_Store
-/build
-/captures
+Thumbs.db

@@ -11,8 +11,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -111,23 +111,19 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
         return true;
     }
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // User clicked on a menu option in the app bar overflow menu
-        switch (item.getItemId()) {
-            // Respond to a click on the "Insert dummy data" menu option
-            case R.id.action_insert_dummy_data:
-                insertInventory();
-                return true;
-            // Respond to a click on the "Delete all entries" menu option
-            case R.id.action_delete_all_entries:
-                deleteAllInventory();
-                return true;
+        int id = item.getItemId();
+        if (id == R.id.action_insert_dummy_data) {
+            insertInventory();
+            return true;
+        } else if (id == R.id.action_delete_all_entries) {
+            deleteAllInventory();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
-
 
     // This method inserts dummy data into databasae
     // Image is in drawable folder.  Create bitmap of this image first.

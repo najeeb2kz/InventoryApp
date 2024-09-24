@@ -14,8 +14,8 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -29,12 +29,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import com.chaudhry.najeeb.inventory.data.InventoryContract.InventoryEntry;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-
 
 
 
@@ -330,46 +327,42 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // User clicked on a menu option in the app bar overflow menu
-        switch (item.getItemId()) {
-            // Respond to a click on the "Save" menu option
-            case R.id.action_save:
-                // Save inventory to database
-                saveInventory();
-                // finish() exits activity.  Will go back to previous activity.
-                finish(); // Call this when your activity is done and should be closed. Activity class.
+        int id = item.getItemId();
+        if (id == R.id.action_save) {
+            // Save inventory to database
+            saveInventory();
+            // finish() exits activity.  Will go back to previous activity.
+            finish(); // Call this when your activity is done and should be closed. Activity class.
+            return true;
+        } else if (id == R.id.action_delete) {
+            // Call showDeleteConfirmationDialog() method to delete inventory
+            showDeleteConfirmationDialog();
+            return true;
+        } else if (id == android.R.id.home) {
+            // If the inventory hasn't changed, continue with navigating up to parent activity
+            // which is the CatalogActivity
+            if (!mInventoryHasChanged) {
+                NavUtils.navigateUpFromSameTask(EditorActivity.this);
                 return true;
-            // Respond to a click on the "Delete" menu option
-            case R.id.action_delete:
-                // Call showDeleteConfirmationDialog() method to delete inventory
-                showDeleteConfirmationDialog();
-                return true;
-            // Respond to a click on the "Up" arrow button in the app bar
-            case android.R.id.home:
-                // If the inventory hasn't changed, continue with navigating up to parent activity
-                // which is the CatalogActivity
-                if (!mInventoryHasChanged) {
+            }
+
+            // Otherwise if there are unsaved changes, setup a dialog to warn the user.
+            // Create a click listener to handle the user confirming that
+            // changes should be discarded.
+            DialogInterface.OnClickListener discardButtonClickListener = new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    // User clicked "Discard" button, navigate to parent activity.
                     NavUtils.navigateUpFromSameTask(EditorActivity.this);
-                    return true;
                 }
+            };
 
-                // Otherwise if there are unsaved changes, setup a dialog to warn the user.
-                // Create a click listener to handle the user confirming that
-                // changes should be discarded.
-                DialogInterface.OnClickListener discardButtonClickListener = new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        // User clicked "Discard" button, navigate to parent activity.
-                        NavUtils.navigateUpFromSameTask(EditorActivity.this);
-                    }
-                };
-
-                // Show a dialog that notifies the user they have unsaved changes
-                showUnsavedChangesDialog(discardButtonClickListener);
-                return true;
+            // Show a dialog that notifies the user they have unsaved changes
+            showUnsavedChangesDialog(discardButtonClickListener);
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
-
 
     @Override
     public Loader<Cursor> onCreateLoader(int loaderID, Bundle args) {
